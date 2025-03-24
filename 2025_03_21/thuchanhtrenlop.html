@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="" method="GET">
+    <input type="text" name="name" required/>
+    Họ và tên: <input type="text" name="ho_ten" size="15" maxlength="50"
+    placehoder="Nhập vào họ tên">
+</form>
+<form style="margin-top: 10px;" action="" method="GET">
+    Mật khẩu: <input type="text" name="mat_khau" size="15" maxlength="30" placehoder="Nhập mật khẩu đi">
+</form>
+<form style="margin-top: 20px;" action="" method="GET">
+    <textarea name="gioi_thieu" cols="20" rows="4" placehoder="Giới thiệu bản thân mình đi"></textarea>
+</form>
+
+     
+     Đáp án đúng:
+     <input type="radio" name="ket_qua" value="a" checked="checked" /> Đáp án A
+     <input type="radio" name="ket_qua" value="b" checked="checked" /> Đáp án B
+     <input type="radio" name="ket_qua" value="c" checked="checked" /> Đáp án C
+
+<br>
+     Sở thích của bạn:
+     <input type="checkbox" name="tao_thich" value="da_bong" /> Đá bóng
+     <input type="checkbox" name="tao_thich" value="bong_ro" /> Bóng rổ
+     <input type="checkbox" name="tao_thich" value="ban_bia" /> Bắn bia
+<br>
+     
+    Chọn nơi bạn đang sống:
+    <select name="thanh_pho">
+        <option value="">--Chọn thành phố---</option>
+        <option value="">Hà Nội</option>
+        <option value="">Nghệ An</option>
+        <option value="">Tp Hồ Chí Minh</option>
+        <option value="">Bắc Ninh</option>
+    </select>
+<br>
+
+    Chọn nơi bạn đã từng sinh sống: <br>
+    <select name="thanh_pho" size="4" multiple="multiple">
+        <option value="hanoihanoi">Hà Nội</option>
+        <option value="hochiminh">Hồ Chí Minh</option>
+        <option value="nghean">Nghệ An</option>
+        <option value="bacninh">Bắc Ninh</option>
+        <option value="hanam">Hà Nam</option>
+    </select>
+<br>
+    
+    File đính kèm
+    <input type="file" name="avatar" accept="image/*" /> <br>
+
+<br>
+    <p> Nhận bài viết siêu hay</p>
+    <input type="next" name="email" />
+    <input type="submit" name="dangky" value="Đăng ký" />
+<br>
+
+    <input type="date" name="date_of_birth" id="date_of_birth"/> <br>
+
+<br>
+    <input type="email" name="email" id="email" placeholder="Email" /> <br>
+<br>
+
+    <input type="ulr" name="website" id="website" /> <br>
+</body>
+</html>
