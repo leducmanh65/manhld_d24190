@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //4. kiem tra mat khau manh.
+    //    function kiemtraMatKhau(matkhau){
+    //     if(matkhau.length < 8){
+    //         return document.write("mật khẩu phải có ít nhât 8 kí tự")
+        
+    //     if(!/[A-Z]/.test(matkhau)){
+    //         return document.write("mật khẩu phải có ít nhất một chữ cái viết hoa")  
+    //     }
+    //     if(!/[a-z]/.test(matkhau)){
+    //         return document.write("mật khẩu phait có ít nhất một chữ thường")
+    //     }
+    //     if(!/[\d]/.test(matkhau)){
+    //         return document.write("mật khẩu phải có ít nhất một sốsố")
+    //     }
+    //     return document.write("mật khẩu mạnh");
+        
+    // }}
+       
+    //    kiemtraMatKhau(Leducmanh8Leducmanh8)
+       //33.đảo ngược một chuỗi 
+       
+        // function daoNguocChuoi(a) {
+        //     return a.split('').reverse().join('');
+        // }
+        // var a = prompt('nhập chuỗi');
+        // document.write(daoNguocChuoi(a));
+        //2. kiểm tra năm nhuận.
+        // function kiemTraNamNhuan(nam){
+            if((nam%4==0 && nam%100!=0) || nam%400==0){
+                return "nam nhuan"
+            }else{
+                return "nam khong nhuan"
+            }
+        
+        var nam = parseInt(prompt("nhap nam; "));
+        document.write(kiemTraNamNhuan(nam));
+
+    
+    </script>
+</body>
+</html>
