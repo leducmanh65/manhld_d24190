@@ -7,6 +7,7 @@ body {
     color: #333; 
     line-height: 1.6;
     overflow-x: hidden; 
+    flex-wrap: wrap;
    
 }
 
@@ -329,7 +330,7 @@ button {
 }
 
 
-/* Specific Card Styling (empty state) */
+
 .upcoming-courses .empty-state,
 .upcoming-ondemand .empty-state {
     text-align: center;
