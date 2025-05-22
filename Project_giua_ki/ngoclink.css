@@ -357,24 +357,7 @@ button {
     margin-bottom: 20px;
 }
 
-/* Card Buttons Area (Cho các card có nút ở cuối) */
-.card-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #495057;
-    flex-shrink: 0;
-    gap: 15px;
-}
 
-/* Điều chỉnh cho trường hợp chỉ có 1 nút */
-.card-buttons.single-button {
-    justify-content: center;
-}
-
-
-/* Assignments Due Card Specific Styling */
 .assignments-due .assignment-item {
     display: flex;
     justify-content: space-between;
@@ -422,8 +405,6 @@ button {
     font-size: 0.9rem;
 }
 
-
-/* Ticket Card Specific Styling */
 .tickets-section .ticket-item {
      margin-bottom: 20px;
      padding-bottom: 20px;
@@ -491,134 +472,4 @@ button {
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    /* Sidebar và Header sẽ không fixed trên mobile */
-    .header-bar {
-        position: static; /* Trở về vị trí bình thường */
-        height: auto; /* Chiều cao tự động */
-        padding: 10px;
-    }
 
-    .sidebar {
-        position: static; /* Trở về vị trí bình thường */
-        width: 100%; /* Chiếm toàn bộ chiều rộng */
-        height: auto; /* Chiều cao tự động */
-        max-height: 200px; /* Giới hạn chiều cao để không chiếm quá nhiều diện tích */
-        padding: 10px 0;
-    }
-
-     .sidebar-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .sidebar-nav li {
-        margin: 5px 10px;
-    }
-
-    .sidebar-nav a {
-        padding: 8px 10px;
-    }
-
-    .sidebar-footer {
-         display: none; /* Ẩn footer sidebar trên màn hình nhỏ để tiết kiệm không gian */
-    }
-
-     .main-content {
-        margin-left: 0; /* Bỏ margin trái */
-        margin-top: 0; /* Bỏ margin trên */
-        width: 100%; /* Chiếm toàn bộ chiều rộng */
-        min-height: auto; /* Bỏ min-height cố định */
-        padding: 10px; /* Giảm padding */
-     }
-
-
-     .header-left {
-         flex-grow: 1;
-     }
-
-     .header-nav {
-         display: none; /* Ẩn navigation trên header ở màn hình nhỏ */
-     }
-
-
-     .dashboard-cards,
-     .dashboard-cards.second-row {
-         grid-template-columns: 1fr;
-         gap: 20px;
-     }
-
-      .card {
-         min-height: auto;
-      }
-
-      .card-buttons {
-          flex-direction: column;
-          gap: 10px;
-      }
-
-      .card-buttons.two-buttons .btn-outline {
-          flex-basis: auto;
-          width: 100%;
-      }
-
-       .card-content.scrollable-content {
-           padding-right: 5px;
-           margin-right: -5px;
-       }
-
-       .card-content.scrollable-content::-webkit-scrollbar {
-            width: 5px;
-        }
-        .card-content.scrollable-content::-webkit-scrollbar-thumb {
-            border: 1px solid #343a40;
-        }
-
-         .tickets-section .ticket-header {
-              flex-direction: column;
-              gap: 5px;
-         }
-}
-
-@media (max-width: 480px) {
-     .header-bar {
-         padding: 10px;
-     }
-
-     .menu-icon {
-          margin-right: 10px;
-     }
-
-     .logo-text {
-         font-size: 1rem;
-         margin-right: 10px;
-     }
-
-     .header-right .icon,
-     .small-logo {
-         margin-left: 10px;
-     }
-
-     .main-content {
-         padding: 10px;
-     }
-
-     .greeting h2 {
-         font-size: 1.2rem;
-     }
-
-     .card {
-         padding: 15px;
-     }
-
-     .card h3 {
-         font-size: 11rem;
-     }
-
-     button {
-         padding: 8px 12px;
-         font-size: 0.9rem;
-     }
-}
