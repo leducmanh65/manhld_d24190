@@ -5,7 +5,7 @@ body{
     background-color: #f8f9fa;
     color: #c9cccf;
     line-height: 1.6; /*khoang cach giua cac dong*/
-    overflow-x: hiden;/* an thanh cuon ngang*/
+    overflow-x: hidden;/* an thanh cuon ngang*/
 }
 
 a{
@@ -169,6 +169,7 @@ button:hover{
     align-items: center;
     padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    color: white;
 }
 
 .sidebar-nav a:hover {
