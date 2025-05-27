@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/JS30/day9_2025_05_25/anh/anh1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+    display: flex;
+    justify-content:center ;
+    
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 50px;
+    background-color: gainsboro;
+    border-radius: 8px ;
+}
+
+button, select {
+    cursor: pointer;
+   
+}
