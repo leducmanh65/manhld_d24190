@@ -7,97 +7,86 @@
 </head>
 <body>
     <script>
-        // //1. kiểm tra số chẵn lẻlẻ
-        // var n = parseInt(prompt("nhap so nguyen n; "));
-        // function kiemTraChanLe(n){
-        //     if(n%2==0){
-        //         return "số chẵn"
-        //     }else{
-        //         return "số lẻ"
-        //     }
-        // }
-        // document.write(kiemTraChanLe(n));
-        
-        // //8. chuyển đổi điểm sốsố
-        // var diem = parseInt(prompt("nhap diem: "));
-        // function xepLoai(diem){
-        //     if(diem>=9){
-        //         return "xuat sac";
-        //     }else if(diem>=8){
-        //         return "gioi";
-        //     }else if(diem>=6.5){
-        //         return "kha";
-        //     }else if(diem>=5){
-        //         return "trung binh";
-        //     }else{
-        //         return "yeu";
-        //     }
+//1. kiem tra chan le
+// var n = parseInt(prompt("nhap so nguyen n: "));
+// function kiemtraChanLe(n){
+//     if(n%2==0){
+//         return "so chan"
+//     }else{
+//         return "so le"
+//     }
+//     }
+// document.write(kiemtraChanLe(n));
+     
+    //   //2.tinh giai thua.
+    //   var n =parseInt(prompt("nhap so nguyen n: "));
+    //   var gt =1;
+    //   function giaiThua(n){
+    //     for(var i=1; i<=n; i++){
+    //         gt*=i;
+    //     } return gt;
+    //   }
+    //   document.write(giaiThua(n));
 
-        // }
-        // document.write(xepLoai(diem) + "<br>");
-
-        //4. Tính tổng các số lẻ nhỏ hơn
-        // var n = parseInt(prompt("nhap so n: "));
-        // var tong = 0;
-        // for(var i=1; i<n; i++){
-        //     if(i%2!=0){
-        //         tong += i;
-        //     }
-        // }
-        // document.write(tong);
-        //6. kiểm tra số nguyên tố
-        // var n = parseInt(prompt("nhap so nguyen n: "));
-        // function kiemTraNguyenTo(n){
-        //     for(var i=2; i<n; i++){
-        //         if(n%i==0){
-        //             return false;
-        //         }
-        //     }
-        //     return true;
-        // }
-        // document.write(kiemTraNguyenTo(n));
-        // 2. tính giai thừa
-        // var n = parseInt(prompt("nhap so nguyen n: "));
-        // function giaiThua(n){
-        //     var gt = 1;
-        //     for(var i=1; i<=n; i++){
-        //         gt *= i;
-        //     }
-        //     return gt;
-        // }
-        // document.write(giaiThua(n));
-    // // 3. đếm số chia hết cho 3 và 5 trong khoảng 1-100
+    // //3.dem so chia het cho 3 va 5 tron khoang 100
     // var tong = 0;
-    // for(var i=1; i<=100; i++){
+    // for(var i=1; i<= 100; i++){
     //     if(i%3==0 && i%5==0){
     //         tong++;
     //     }
+    // } document.write(tong)
+
+    //4. chuyen doi diem so
+    // var diem = parseInt(prompt("nhap diem:"));
+    // function xepLoai(diem){
+    //     if(diem>=9){
+    //         return " xuat sac";
+    //     }else if(diem>=8){
+    //         return "gioi";
+    //     }else if(diem>=6.5){
+    //         return "kha"
+    //     }else if(diem>= 5){
+    //         return "trung binh";
+
+    //     }else{
+    //         return "yeu";
+    //     }
     // }
-    // document.write(tong);
-        // //5. hiện thị bảng cửu chương 
-        // for(var i=2; i<=9; i++){
-        //     for(var j=1; j<=9; j++){
-        //         document.write(i + "x" + j + "=" + i*j + "<br>");
-        //     }
-        // }
-        // 7. vẽ tam giác sao
-        // for(var i=1; i<=5; i++){
-        //     for(var j=1; j<=i; j++){
-        //         document.write("*");
-        //     }
-        //     document.write("<br>");
-       // }
-        // // 9.tính tổng chữ số
-        // var n = parseInt(prompt("nhap so nguyen n: "));
-        // var tong = 0;
-        // while(n>0){
-        //     tong += n%10;
-        //     n = parseInt(n/10);
-        // }
-        // document.write(tong);
+    // document.write(xepLoai(diem));
 
 
+    //5. hien thi bang cuu chuong
+    // for(var i=2; i<=9; i++){
+    //     for(var j=1; j<=9; j++){
+    //         document.write(i + "x" + j + "=" + i*j + "<br>");
+    //     }
+    // }
 
+    //6. kiem tra so nguyen to
+    // var n = parseInt(prompt(n));
+    // function kiemtraNguyenTo(n){
+    //     for(var i=2; i<n; i++){
+    //         if(n%i==0){
+    //             return false;
+    //         }
+    //     }return true;
+    // }
+    // document.write(kiemtraNguyenTo(n));
+
+    //7. ve tam giac sao
+    // for(var i=1; i<=5; i++){
+    //     for(var j=1; j<=i; j++){
+    //         document.write("*");
+    //     } document.write('<br>');
+    // }
+
+    //8. tinh tong cac so le nho hon 100
+    var tong =0;
+    for(var i=1; i<= 100; i++){
+        if(i%2!= 0){
+            tong+=i;
+        }
+    } document.write(tong);
     </script>
 </body>
 </html>
