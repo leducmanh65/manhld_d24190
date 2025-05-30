@@ -22,25 +22,48 @@
     // document.write(nam.id+"<br>" + nam.name + "<br>" + nam.salary);
 
 
+    // class Person{
+    //     name;
+    //     age;
+    //     salary;
+    //     hello(){
+    //         document.write("hello "+ this.name);
+    //     }
+    //     changeSalary(newSalary){
+    //         this.salary = newSalary;
+    //     }
+    // }
+    
+    // a  = new Person();
+    // a.name = "le duc manh"
+    // a.hello();
+    // a.salary = 30 ;
+    // document.write('<br>'+a.name +': '+a.salary);
+    // a.changeSalary(100);
+    // document.write('<br>'+a.name +': '+a.salary);
+
     class Person{
         name;
         age;
         salary;
+        constructor (name, age, salary){
+            this.age = age;
+            this.name = name;
+            this.salary = salary;
+        }   
         hello(){
-            document.write("hello "+ this.name);
+            document.write("<br>hello "+ this.name);
         }
-        changeSalary(newSalary){
-            this.salary = newSalary;
-        }
-    }
+         }
+    ducmanh = new Person;
+    ducmanh.name="le duc manh";
+    ducmanh.hello();
+"<br>"
+    rody_grace = new Person("Rody", 18, 10000000);
+    rody_grace.hello();
+
     
-    a  = new Person();
-    a.name = "le duc manh"
-    a.hello();
-    a.salary = 30 ;
-    document.write('<br>'+a.name +': '+a.salary);
-    a.changeSalary(100);
-    document.write('<br>'+a.name +': '+a.salary);
+    
     </script>
 </body>
 </html>
