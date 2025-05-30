@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    var student= new Object();
+    //    student.id="ript001";
+    //    student.name="Le Duc Manh";
+    //    student.salary="30man";
+    //    document.write(student.id + "<br>" + student.name + "<br>" + student.salary);
+    // function student(id, ten, luong){
+    //     this.id = id;
+    //     this.name = ten;
+    //     this.salary = luong;
+
+    // }
+    // nam = new student("ript001", "Le Duc Manh", "30man");
+    // document.write(nam.id+"<br>" + nam.name + "<br>" + nam.salary);
+
+
+    class Person{
+        name;
+        age;
+        salary;
+        hello(){
+            document.write("hello "+ this.name);
+        }
+        changeSalary(newSalary){
+            this.salary = newSalary;
+        }
+    }
+    
+    a  = new Person();
+    a.name = "le duc manh"
+    a.hello();
+    a.salary = 30 ;
+    document.write('<br>'+a.name +': '+a.salary);
+    a.changeSalary(100);
+    document.write('<br>'+a.name +': '+a.salary);
+    </script>
+</body>
+</html>
