@@ -1,0 +1,93 @@
+ <!-- //    //4. kiem tra mat khau manh.
+    //    function kiemtraMatKhau(matkhau){
+    //     if(matkhau.length < 8){
+    //         return document.write("mật khẩu phải có ít nhât 8 kí tự")
+        
+    //     if(!/[A-Z]/.test(matkhau)){
+    //         return document.write("mật khẩu phải có ít nhất một chữ cái viết hoa")  
+    //     }
+    //     if(!/[a-z]/.test(matkhau)){
+    //         return document.write("mật khẩu phait có ít nhất một chữ thường")
+    //     }
+    //     if(!/[\d]/.test(matkhau)){
+    //         return document.write("mật khẩu phải có ít nhất một sốsố")
+    //     }
+    //     return document.write("mật khẩu mạnh");
+        
+    // }}
+       
+    //    document.write(kiemtraMatKhau(Leducmanh8Leducmanh8))
+       //33.đảo ngược một chuỗi 
+       
+        // function daoNguocChuoi(a) {
+        //     return a.split('').reverse().join('');
+        // }
+        // var a = prompt('nhập chuỗi');
+        // document.write(daoNguocChuoi(a));
+        //2. kiểm tra năm nhuận.
+        // function kiemTraNamNhuan(nam){
+        //     if((nam%4==0 && nam%100!=0) || nam%400==0){
+        //         return "nam nhuan"
+        //     }else{
+        //         return "nam khong nhuan"
+        //     }
+        
+        // var nam = parseInt(prompt("nhap nam; "));
+        // document.write(kiemTraNamNhuan(nam));
+        //1. tính số fibonacci.
+        // em chưa nghĩ ra thuật toán cho cái này theo cách dùng vòng lặp thàyaj. em xin phép đem nay nghiên cứu tiếp rồi uploat tiếp ạ
+        
+//        //<!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <script>
+//         function fibonacci(n) {
+//             if (n <= 1) {
+//                 return n
+//             }
+//             let a = 0
+//             let b = 1
+//             for (let i = 2; i <=n; i++ ) {
+//                 let temp = b
+//                 b = a + b
+//                 a = temp
+//             }
+//             return b
+//         }
+
+//         document.write(fibonacci(2)) -->
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+document.write(fibonacci(10)); // Kết quả: 55
+
+
+
+// function kiemtramatkhau(matkhau) {
+//             if (matkhau.length < 8) {
+//                 return document.write("mật khẩu phải có ít nhất là 8 ký tự")
+//             }
+//             if (!/[A-Z]/.test(matkhau)) {
+//                 return document.write("Mật khẩu phải có ít nhất ký tự viết hoa")
+//             }
+//             if (!/[a-z]/.test(matkhau)) {
+//                 return document.write("mật khẩu phải có ít nhất ký tự viết thường")
+//             } 
+//             if (!/\d/.test(matkhau)) {
+//                 return document.write("mật khẩu phải có ít nhất 1 số")
+//             }
+//             return document.write('mật khẩu mạnh')
+//         }
+//         kiemtramatkhau("Khacbao17")
+
+    
+    </script>
+</body>
+</html>
