@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="demo"></p>
+    <script>
+        var width = window.innerWidth;
+        || document.documentElement.clientWidth;
+        || document.body.clientWidth;
+
+        var height = window.innerHeight;
+        || document.documentElement.clientHeight;
+        || documetn.body.clientHeight;
+
+        var x = document.getElementById("demo");
+        x.innerHTML = "chieu cao rong trinh duyet" + width + "chieu cao cua trinh duyet:"+ height + "."; -->
+
+<!-- 
+
+        <!-- <div>click vao button de nhan ket qua</div>
+        <button type="button" onclick="openW()">Mở cửa sổ</button>
+        <script type="text/javascript">
+            function openW(){
+                window.open("https://www.facebook.com/?locale=vi_VN", 'ptit', 'width=500, height=600');
+                return false;
+
+            }
+        </script> -->
+
+
+        <!-- <div>Click vào button để xem kết quả</div>
+        <button type="button" onclick="openW1()">mo cua so ptit</button>
+        <button type="button" onclick="openW2()">mo cua so dantri</button>
+        <button type="button" onclick="closeW1()">dong cua so ptit</button>
+        <button type="button" onclick="closeW2()">dong cua so dantri</button>
+        <script type="text/javascript">
+            function openW1(){
+                ptit = window.open('https://slink.ptit.edu.vn/lop-tin-chi/66f8fff28d7a8bd302904950#bai-tap', 'ptit', 'width=500, height=600, left=100px, top=20px', false);
+                return false;
+            }
+
+            function openW2(){
+                dantri = window.open('https://dantri.com.vn/', 'dantri', 'width=500, height=600,left=100px, top= 20px', false);
+            }
+
+            function closeW2(){
+                dantri.close;
+            }
+
+            function closeW1(){
+                ptit.close;
+            }
+        </script> --> -->
+         <!-- <div>Click vào button để xem kết quả</div>
+    <button type="button" onclick="openW()">Mở cửa sổ PTIT</button>
+    <button type="button" onclick="resizeW()">Di chuyển</button>
+
+    <script type="text/javascript">
+    function openW() {
+        ptit = window.open('', '', 'width=300,height=200');
+    }
+
+    function resizeW() {
+            ptit.resizeTo(500,700);
+            ptit.focus();
+		} -->
+
+<style type="text/css" media="screen">
+	p{
+		border:1px solid #dddddd;
+		background: #e1e1e1;
+		padding: 10px;
+	}
+</style>
+<body>
+	<div>Click vào button để xem kết quả</div>
+	<button type="button" onclick="getInfo()">Click để hiển thị thông tin trang</button>
+	<p id="results"></p>
+	<script type="text/javascript">
+		function getInfo() {
+			var info = 'hash: ' + window.location.hash + '<br>';
+			info += 'host: ' + window.location.host + '<br>';
+			info += 'hostname: ' + window.location.hostname + '<br>';
+			info += 'href: ' + window.location.href + '<br>';
+			info += 'origin: ' + window.location.origin + '<br>';
+			info += 'pathname: ' + window.location.pathname + '<br>';
+			info += 'port: ' + window.location.port + '<br>';
+			info += 'search: ' + window.location.search + '<br>';
+			document.getElementById('results').innerHTML = info;
+		}
+	</script>
+    
+
+    </script>
+</body>
+</html>

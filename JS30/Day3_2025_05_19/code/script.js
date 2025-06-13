@@ -1,4 +1,4 @@
-document.querySelector('.img-btn').addEventListener('click', function())
+
 document.addEventListener()
 {
   document.querySelector('.cont').classList.toggle('s-signup')
