@@ -732,3 +732,45 @@ button:hover{
     border: 1.5px solid #007bff;
     object-fit: cover;
 }
+
+
+.footer-banner {
+    width: 100%;
+    margin: 32px auto;    
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-image {
+    width: 90%;           
+    max-width: 1000px;    
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    display: block;      
+    margin: 0 auto;       
+}
+
+/* bắt đầu tạo trang cho khóa học*/
+.nav-item .submenu {
+    display: none;
+    margin-left: 24px;
+    margin-top: 8px;
+}
+
+.nav-item.has-dropdown.active .submenu {
+    display: block;
+}
+
+.nav-item.has-dropdown.active .dropdown-arrow i {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.submenu-item {
+    padding: 8px 0;
+    font-size: inherit;
+    color: inherit;
+}
