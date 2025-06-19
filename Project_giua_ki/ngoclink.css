@@ -754,23 +754,105 @@ button:hover{
 }
 
 /* bắt đầu tạo trang cho khóa học*/
-.nav-item .submenu {
-    display: none;
-    margin-left: 24px;
-    margin-top: 8px;
+.course-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.nav-item.has-dropdown.active .submenu {
-    display: block;
+.course-stats {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
 }
 
-.nav-item.has-dropdown.active .dropdown-arrow i {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
+.stat-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
-.submenu-item {
-    padding: 8px 0;
-    font-size: inherit;
-    color: inherit;
+.stat-number {
+    font-weight: bold;
+}
+
+.course-filter {
+    margin-bottom: 24px;
+}
+
+.filter-select {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.course-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    background: white;
+}
+
+.card-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e3f2fd;
+    color: #1976d2;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.course-title {
+    color: #1976d2;
+    margin-bottom: 16px;
+}
+
+.course-info {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-stats-detail {
+    border-top: 1px solid #eee;
+    padding-top: 24px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.stat-detail {
+    text-align: center;
+}
+
+.stat-total {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.progress-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(#1976d2 50%, #e0e0e0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-text {
+    background: white;
+    border-radius: 50%;
+    padding: 16px;
+    font-weight: bold;
 }
