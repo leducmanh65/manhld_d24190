@@ -4,7 +4,7 @@ body{
     padding: 0;
     background-color: #f8f9fa;
     color: #c9cccf;
-    line-height: 1.6; /*khoang cach giua cac dong*/
+    line-height: 1.6; 
     overflow-x: hidden;/* an thanh cuon ngang*/
 }
 
@@ -197,10 +197,9 @@ button:hover{
      align-items: center;
 }
 
-.dropdown-arrow {
-     font-size: 0.8rem;
-     margin-right: 15px;
-     transition: transform 0.3s ease;
+.dropdown-arrow,
+.submenu-arrow {
+    display: none !important;
 }
 
 
@@ -856,3 +855,4 @@ button:hover{
     padding: 16px;
     font-weight: bold;
 }
+
