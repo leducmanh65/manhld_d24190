@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fbf7f4;
+    box-sizing: border-box;
+    color: #3d3d3d;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.login-container {
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.image-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+h1 {
+    text-align: center;
+    color: #1c1c1c;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.input-group, .password-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 18px 14px 45px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.password-group {
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    color: #3d3d3d;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #3d3d3d;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.forgot-password:hover {
+    background-color: #f0f0f0;
+}
+
+
+.recaptcha {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    clear: both;
+}
+.recaptcha-checkbox {
+    display: flex;
+    align-items: center;
+}
+.recaptcha input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border: 2px solid #c1c1c1;
+    cursor: pointer;
+}
+.recaptcha-checkbox label {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.recaptcha-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.recaptcha-logo img {
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+}
+.recaptcha-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recaptcha-text span {
+    font-size: 12px;
+    font-weight: 500;
+}
+.recaptcha-text small {
+    font-size: 10px;
+    color: #888;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid #a9a9a9;
+    border-radius: 25px;
+    transition: border-color 0.3s;
+}
+
+.btn-login {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #a9a9a9;
+}
+.btn-login:hover {
+    background-color: #e0e0e0;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+    margin: 15px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.separator span {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #a9a9a9;
+}
+.btn-social:hover {
+    background-color: #f5f5f5;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.social-buttons .btn {
+    margin-bottom: 0;
+}
+
+.btn-social img {
+    width: 20px;
+    height: 20px;
+}
+.btn-social .fa-facebook {
+    color: #1877F2;
+    font-size: 22px;
+}
+.btn-social .fa-envelope {
+    font-size: 20px;
+}

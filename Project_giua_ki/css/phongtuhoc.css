@@ -1,179 +1,171 @@
-.studyroom-top {
+body {
+    background-color: #fdfdfd;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 24px;
+}
+
+.studyroom-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.studyroom-sidebar {
     display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
-    background: transparent;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.studyroom-main {
+    display: flex;
+    flex-direction: column;
 }
 
 .studyroom-map {
-    flex: 1;
+    position: relative;
+    margin-bottom: 24px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-width: 260px;
+    justify-content: center;
 }
 
 .studyroom-map-img {
-    width: 220px;
-    height: 170px;
+    width: 100%;
+    max-width: 250px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    border: 2px solid #bfa46a;
-    margin-bottom: 12px;
-    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.studyroom-map-img:hover {
-    transform: scale(1.04) rotate(-2deg);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+
+.studyroom-map:hover .studyroom-map-img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .btn-map {
-    padding: 10px 32px;
-    border: 2px solid #3b2f1c;
+    position: absolute;
+    bottom: -15px;
+    padding: 8px 24px;
+    border: 1px solid #ccc;
     background: #fff;
-    color: #3b2f1c;
-    border-radius: 32px;
-    font-size: 18px;
+    color: #333;
+    border-radius: 20px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 1px 2px rgba(60,40,20,0.04);
-    margin-top: -36px;
-    position: relative;
-    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     gap: 8px;
-}
-.btn-map:hover {
-    background: #0071b6;
-    color: #fff;
-    border-color: #0071b6;
-    box-shadow: 0 4px 16px rgba(0,113,182,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.studyroom-rooms {
-    flex: 4;
-    display: flex;
+.studyroom-map:hover .btn-map {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-map a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.studyroom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
 .studyroom-room {
     background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 2px 12px rgba(60,40,20,0.08);
-    border: 2px solid #bfa46a;
+    border-radius: 12px;
     overflow: hidden;
-    width: 150px;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: box-shadow 0.22s, transform 0.18s, border-color 0.18s;
-    margin-bottom: 0;
-    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .studyroom-room:hover {
-    box-shadow: 0 8px 32px rgba(60,40,20,0.18);
-    transform: translateY(-6px) scale(1.04);
-    border-color: #0071b6;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .studyroom-room img {
     width: 100%;
-    height: 110px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 18px 18px 0 0;
-    transition: filter 0.2s;
-}
-.studyroom-room:hover img {
-    filter: brightness(0.95) saturate(1.2);
+    display: block;
 }
 
 .room-info {
-    padding: 10px 0 14px 0;
-    text-align: center;
+    padding: 12px;
 }
 
 .room-name {
     font-weight: 700;
-    font-size: 20px;
-    color: #3b2f1c;
-    letter-spacing: 1px;
+    font-size: 16px;
+    color: #333;
 }
 
 .room-time {
-    font-size: 15px;
-    color: #7c6f57;
-    margin-top: 2px;
+    font-size: 14px;
+    color: #777;
+    margin-top: 4px;
 }
 
 .studyroom-title {
-    margin: 32px 0 16px 0;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
-    color: #3b2f1c;
+    color: #333;
+    margin: 0 0 8px 0;
 }
 
 .studyroom-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-bottom: 32px;
+    gap: 12px;
 }
 
 .studyroom-center {
-    background: #fff;
-    border-radius: 18px;
-    border: 2px solid #bfa46a;
-    padding: 18px 24px;
-    box-shadow: 0 2px 8px rgba(60,40,20,0.06);
-    font-size: 17px;
-    font-weight: 600;
-    transition: box-shadow 0.22s, border-color 0.18s, transform 0.18s;
-    margin-bottom: 0;
-}
-.studyroom-center:hover {
-    border-color: #0071b6;
-    box-shadow: 0 8px 32px rgba(0,113,182,0.10);
-    transform: translateY(-3px) scale(1.01);
-    background: linear-gradient(120deg, #fffbe9 0%, #fdf6ee 100%);
+    background-color: #faf8f5;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0d9cf;
 }
 
 .center-info .center-name {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
-    color: #3b2f1c;
+    color: #d96634;
 }
 
 .center-info .center-address {
-    font-size: 15px;
-    color: #7c6f57;
+    font-size: 14px;
+    color: #555;
     margin-top: 4px;
+    line-height: 1.4;
 }
 
 @media (max-width: 1100px) {
-    .studyroom-top, .studyroom-rooms {
-        flex-direction: column;
-        gap: 18px;
+    .studyroom-container {
+        grid-template-columns: 280px 1fr;
     }
-    .studyroom-map-img, .studyroom-room img {
-        max-width: 100%;
-    }
-    .studyroom-room {
-        width: 100%;
-        min-width: 0;
+    .studyroom-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 900px) {
-    .studyroom-rooms {
-        flex-wrap: wrap;
-        gap: 16px;
+
+@media (max-width: 768px) {
+    .studyroom-container {
+        grid-template-columns: 1fr;
     }
-    .studyroom-room {
-        width: 100%;
-        min-width: 0;
+     .studyroom-sidebar {
+        padding-bottom: 24px;
+        border-bottom: 1px solid #eee;
     }
 }
