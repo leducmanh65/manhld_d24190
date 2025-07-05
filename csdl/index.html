@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSDL-7</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
+</head>
+<body>
+	<div class="sidebar">
+        <h2>Quản Lý Bệnh Viện</h2>
+        <a href="#" onclick="showSection('patients')">Bệnh Nhân</a>
+        <a href="#" onclick="showSection('doctors')">Bác Sĩ</a>
+        <a href="#" onclick="showSection('nurses')">Y Tá</a>
+        <a href="#" onclick="showSection('examinations')">Khám Bệnh</a>
+        <a href="#" onclick="showSection('tests')">Xét Nghiệm</a>
+        <a href="#" onclick="showSection('test-results')">Kết Quả Xét Nghiệm</a>
+        <a href="#" onclick="showSection('medicines')">Thuốc</a>
+        <a href="#" onclick="showSection('prescriptions')">Đơn Thuốc</a>
+        <a href="#" onclick="showSection('prescription-details')">Chi Tiết Đơn Thuốc</a>
+        <a href="#" onclick="showSection('beds')">Giường Bệnh</a>
+        <a href="#" onclick="showSection('admissions')">Nhập Viện</a>
+        <a href="#" onclick="showSection('bills')">Hóa Đơn</a>
+    </div>
+
+    <div class="main-content">
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Bệnh Nhân -->
+        <div id="patients" class="section">
+            <h1>Quản Lý Bệnh Nhân</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Bệnh Nhân</h3>
+                <form id="patientForm">
+                    <input type="hidden" id="patient_MaBN" name="MaBN">
+                    <input type="text" id="patient_HoTen" name="HoTen" placeholder="Họ Tên" required>
+                    <input type="date" id="patient_NgaySinh" name="NgaySinh" required>
+                    <select id="patient_GioiTinh" name="GioiTinh" required>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                    <input type="text" id="patient_DiaChi" name="DiaChi" placeholder="Địa Chỉ" required>
+                    <input type="text" id="patient_SDT" name="SDT" placeholder="SĐT" required pattern="[0-9]{10}">
+                    <input type="text" id="patient_CMND" name="CMND" placeholder="CMND" required pattern="[0-9]{9,12}">
+                    <input type="text" id="patient_TienSuBenh" name="TienSuBenh" placeholder="Tiền Sử Bệnh">
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('patientForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="patientTable">
+                <thead>
+                    <tr>
+                        <th>Mã BN</th>
+                        <th>Họ Tên</th>
+                        <th>Ngày Sinh</th>
+                        <th>Giới Tính</th>
+                        <th>Địa Chỉ</th>
+                        <th>SĐT</th>
+                        <th>CMND</th>
+                        <th>Tiền Sử Bệnh</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Bác Sĩ -->
+        <div id="doctors" class="section" style="display: none;">
+            <h1>Quản Lý Bác Sĩ</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Bác Sĩ</h3>
+                <form id="doctorForm">
+                    <input type="hidden" id="doctor_MaBS" name="MaBS">
+                    <input type="text" id="doctor_HoTen" name="HoTen" placeholder="Họ Tên" required>
+                    <input type="text" id="doctor_ChuyenKhoa" name="ChuyenKhoa" placeholder="Chuyên Khoa" required>
+                    <input type="text" id="doctor_SDT" name="SDT" placeholder="SĐT" required pattern="[0-9]{10}">
+                    <input type="email" id="doctor_Email" name="Email" placeholder="Email" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('doctorForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="doctorTable">
+                <thead>
+                    <tr>
+                        <th>Mã BS</th>
+                        <th>Họ Tên</th>
+                        <th>Chuyên Khoa</th>
+                        <th>SĐT</th>
+                        <th>Email</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Y Tá -->
+        <div id="nurses" class="section" style="display: none;">
+            <h1>Quản Lý Y Tá</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Y Tá</h3>
+                <form id="nurseForm">
+                    <input type="hidden" id="nurse_MaYT" name="MaYT">
+                    <input type="text" id="nurse_HoTen" name="HoTen" placeholder="Họ Tên" required>
+                    <input type="text" id="nurse_ChuyenMon" name="ChuyenMon" placeholder="Chuyên Môn" required>
+                    <input type="text" id="nurse_SDT" name="SDT" placeholder="SĐT" required pattern="[0-9]{10}">
+                    <input type="text" id="nurse_CaLamViec" name="CaLamViec" placeholder="Ca Làm Việc" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('nurseForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="nurseTable">
+                <thead>
+                    <tr>
+                        <th>Mã YT</th>
+                        <th>Họ Tên</th>
+                        <th>Chuyên Môn</th>
+                        <th>SĐT</th>
+                        <th>Ca Làm Việc</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Khám Bệnh -->
+        <div id="examinations" class="section" style="display: none;">
+            <h1>Quản Lý Khám Bệnh</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Lần Khám</h3>
+                <form id="examinationForm">
+                    <input type="hidden" id="examination_MaKham" name="MaKham">
+                    <input type="date" id="examination_NgayKham" name="NgayKham" required>
+                    <input type="time" id="examination_GioKham" name="GioKham" required>
+                    <input type="text" id="examination_TrieuChung" name="TrieuChung" placeholder="Triệu Chứng" required>
+                    <input type="text" id="examination_ChanDoan" name="ChanDoan" placeholder="Chẩn Đoán" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('examinationForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="examinationTable">
+                <thead>
+                    <tr>
+                        <th>Mã Khám</th>
+                        <th>Ngày Khám</th>
+                        <th>Giờ Khám</th>
+                        <th>Triệu Chứng</th>
+                        <th>Chẩn Đoán</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Xét Nghiệm -->
+        <div id="tests" class="section" style="display: none;">
+            <h1>Quản Lý Xét Nghiệm</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Xét Nghiệm</h3>
+                <form id="testForm">
+                    <input type="hidden" id="test_MaXN" name="MaXN">
+                    <input type="text" id="test_TenXetNghiem" name="TenXetNghiem" placeholder="Tên Xét Nghiệm" required>
+                    <input type="text" id="test_LoaiXetNghiem" name="LoaiXetNghiem" placeholder="Loại Xét Nghiệm" required>
+                    <input type="number" id="test_GiaTien" name="GiaTien" placeholder="Giá Tiền" required min="0">
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('testForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="testTable">
+                <thead>
+                    <tr>
+                        <th>Mã XN</th>
+                        <th>Tên Xét Nghiệm</th>
+                        <th>Loại Xét Nghiệm</th>
+                        <th>Giá Tiền</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Kết Quả Xét Nghiệm -->
+        <div id="test-results" class="section" style="display: none;">
+            <h1>Quản Lý Kết Quả Xét Nghiệm</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Kết Quả Xét Nghiệm</h3>
+                <form id="testResultForm">
+                    <input type="hidden" id="testResult_MaKetQua" name="MaKetQua">
+                    <input type="date" id="testResult_NgayLamXN" name="NgayLamXN" required>
+                    <input type="text" id="testResult_KetQua" name="KetQua" placeholder="Kết Quả" required>
+                    <input type="text" id="testResult_NhanXet" name="NhanXet" placeholder="Nhận Xét" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('testResultForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="testResultTable">
+                <thead>
+                    <tr>
+                        <th>Mã Kết Quả</th>
+                        <th>Ngày Làm XN</th>
+                        <th>Kết Quả</th>
+                        <th>Nhận Xét</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Thuốc -->
+        <div id="medicines" class="section" style="display: none;">
+            <h1>Quản Lý Thuốc</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Thuốc</h3>
+                <form id="medicineForm">
+                    <input type="hidden" id="medicine_MaThuoc" name="MaThuoc">
+                    <input type="text" id="medicine_TenThuoc" name="TenThuoc" placeholder="Tên Thuốc" required>
+                    <input type="text" id="medicine_HoatChat" name="HoatChat" placeholder="Hoạt Chất" required>
+                    <input type="text" id="medicine_DonViTinh" name="DonViTinh" placeholder="Đơn Vị Tính" required>
+                    <input type="number" id="medicine_Gia" name="Gia" placeholder="Giá" required min="0">
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('medicineForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="medicineTable">
+                <thead>
+                    <tr>
+                        <th>Mã Thuốc</th>
+                        <th>Tên Thuốc</th>
+                        <th>Hoạt Chất</th>
+                        <th>Đơn Vị Tính</th>
+                        <th>Giá</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Đơn Thuốc -->
+        <div id="prescriptions" class="section" style="display: none;">
+            <h1>Quản Lý Đơn Thuốc</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Đơn Thuốc</h3>
+                <form id="prescriptionForm">
+                    <input type="hidden" id="prescription_MaDonThuoc" name="MaDonThuoc">
+                    <input type="date" id="prescription_NgayKe" name="NgayKe" required>
+                    <input type="number" id="prescription_TongTien" name="TongTien" placeholder="Tổng Tiền" required min="0">
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('prescriptionForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="prescriptionTable">
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Thuốc</th>
+                        <th>Ngày Kê</th>
+                        <th>Tổng Tiền</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Chi Tiết Đơn Thuốc -->
+        <div id="prescription-details" class="section" style="display: none;">
+            <h1>Quản Lý Chi Tiết Đơn Thuốc</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Chi Tiết Đơn Thuốc</h3>
+                <form id="prescriptionDetailForm">
+                    <input type="hidden" id="prescriptionDetail_MaDonThuoc" name="MaDonThuoc">
+                    <input type="hidden" id="prescriptionDetail_MaThuoc" name="MaThuoc">
+                    <input type="number" id="prescriptionDetail_SoLuong" name="SoLuong" placeholder="Số Lượng" required min="1">
+                    <input type="text" id="prescriptionDetail_LieuDung" name="LieuDung" placeholder="Liều Dùng" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('prescriptionDetailForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="prescriptionDetailTable">
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Thuốc</th>
+                        <th>Mã Thuốc</th>
+                        <th>Số Lượng</th>
+                        <th>Liều Dùng</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Giường Bệnh -->
+        <div id="beds" class="section" style="display: none;">
+            <h1>Quản Lý Giường Bệnh</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Giường Bệnh</h3>
+                <form id="bedForm">
+                    <input type="hidden" id="bed_MaGiuong" name="MaGiuong">
+                    <input type="text" id="bed_LoaiPhong" name="LoaiPhong" placeholder="Loại Phòng" required>
+                    <input type="text" id="bed_Tang" name="Tang" placeholder="Tầng" required>
+                    <input type="text" id="bed_TrangThai" name="TrangThai" placeholder="Trạng Thái" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('bedForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="bedTable">
+                <thead>
+                    <tr>
+                        <th>Mã Giường</th>
+                        <th>Loại Phòng</th>
+                        <th>Tầng</th>
+                        <th>Trạng Thái</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Nhập Viện -->
+        <div id="admissions" class="section" style="display: none;">
+            <h1>Quản Lý Nhập Viện</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Nhập Viện</h3>
+                <form id="admissionForm">
+                    <input type="hidden" id="admission_MaNhapVien" name="MaNhapVien">
+                    <input type="date" id="admission_NgayNhapVien" name="NgayNhapVien" required>
+                    <input type="date" id="admission_NgayXuatVien" name="NgayXuatVien">
+                    <input type="text" id="admission_LyDoNhapVien" name="LyDoNhapVien" placeholder="Lý Do Nhập Viện" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('admissionForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="admissionTable">
+                <thead>
+                    <tr>
+                        <th>Mã Nhập Viện</th>
+                        <th>Ngày Nhập Viện</th>
+                        <th>Ngày Xuất Viện</th>
+                        <th>Lý Do Nhập Viện</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Hóa Đơn -->
+        <div id="bills" class="section" style="display: none;">
+            <h1>Quản Lý Hóa Đơn</h1>
+            <div class="form-container">
+                <h3>Thêm/Sửa Hóa Đơn</h3>
+                <form id="billForm">
+                    <input type="hidden" id="bill_MaHoaDon" name="MaHoaDon">
+                    <input type="date" id="bill_NgayLap" name="NgayLap" required>
+                    <input type="number" id="bill_TongTien" name="TongTien" placeholder="Tổng Tiền Thuốc" required min="0">
+                    <input type="text" id="bill_MaBHYT" name="MaBHYT" placeholder="Mã Bảo Hiểm Y Tế (nếu có)">
+                    <input type="text" id="bill_PhuongThucThanhToan" name="PhuongThucThanhToan" placeholder="Phương Thức Thanh Toán" required>
+                    
+                    <!-- Hiển thị thông tin giảm giá -->
+                    <div id="discountInfo" style="display: none; background: #e8f5e8; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                        <p><strong>Thông tin giảm giá:</strong></p>
+                        <p>Tổng tiền gốc: <span id="originalAmount">0</span> VNĐ</p>
+                        <p>Giảm giá BHYT (20%): <span id="discountAmount">0</span> VNĐ</p>
+                        <p><strong>Tổng tiền sau giảm giá: <span id="finalAmount">0</span> VNĐ</strong></p>
+                    </div>
+                    
+                    <button type="submit">Lưu</button>
+                    <button type="button" onclick="resetForm('billForm')">Hủy</button>
+                </form>
+            </div>
+            <table id="billTable">
+                <thead>
+                    <tr>
+                        <th>Mã Hóa Đơn</th>
+                        <th>Ngày Lập</th>
+                        <th>Tổng Tiền Gốc</th>
+                        <th>Giảm Giá BHYT</th>
+                        <th>Tổng Tiền Sau Giảm</th>
+                        <th>Mã BHYT</th>
+                        <th>Phương Thức Thanh Toán</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>   
+</body>
+</html>
