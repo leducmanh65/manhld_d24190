@@ -151,6 +151,31 @@ body {
     line-height: 1.4;
 }
 
+.back-home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d81b60;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.back-home-btn:hover {
+    background: #d81b60;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(216, 27, 96, 0.2);
+}
+
 @media (max-width: 1100px) {
     .studyroom-container {
         grid-template-columns: 280px 1fr;

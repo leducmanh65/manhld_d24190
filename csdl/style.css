@@ -77,12 +77,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
-    align-items: start;
-}
-
-.form-container form > * {
-    min-height: 40px;
-    max-height: 40px;
 }
 
 .form-container input,
@@ -92,13 +86,6 @@ body {
     border-radius: 6px;
     font-size: 14px;
     transition: border-color 0.3s, box-shadow 0.3s;
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-    resize: none;
-    box-sizing: border-box;
-    height: 40px;
-    flex-shrink: 0;
 }
 
 .form-container input:focus,
@@ -106,46 +93,6 @@ body {
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
     outline: none;
-}
-
-/* Đảm bảo tất cả input không thay đổi kích thước */
-.form-container input[type="number"],
-.form-container input[type="text"],
-.form-container input[type="email"],
-.form-container input[type="date"],
-.form-container input[type="time"],
-.form-container input[type="password"] {
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-    resize: none;
-    box-sizing: border-box;
-    height: 40px;
-    flex-shrink: 0;
-    overflow: hidden;
-}
-
-/* Loại bỏ mũi tên cho input số */
-.form-container input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-.form-container input[type="number"]::-webkit-outer-spin-button,
-.form-container input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Đảm bảo select cũng có kích thước cố định */
-.form-container select {
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-    resize: none;
-    box-sizing: border-box;
-    height: 40px;
-    flex-shrink: 0;
-    overflow: hidden;
 }
 
 .form-container button {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học từ vựng</title>
+    <link rel="stylesheet" href="/WEB_HLS_CODE/Project_giua_ki/css/hoctuvung.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <a href="/WEB_HLS_CODE/Project_giua_ki/html/trangchu.html" class="back-home-btn" title="Trở về trang chủ">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="vocab-center-box">
+        <div class="plus-icon">+</div>
+        <div class="vocab-create-label">Tạo bộ từ vựng mới</div>
+    </div>
+    <div class="vocab-popup" id="vocabPopup" style="display:none;">
+        <div class="vocab-popup-content">
+            <button class="vocab-popup-close" id="closePopup">&times;</button>
+            <h2>Nhập bộ từ vựng mới</h2>
+            <input id="vocabTopic" class="vocab-topic-input" type="text" placeholder="Nhập chủ đề...">
+            <textarea id="vocabInput" placeholder="Nhập mỗi dòng: từ - nghĩa..." rows="8"></textarea>
+            <button id="saveVocab" class="vocab-popup-save">Lưu</button>
+        </div>
+    </div>
+    <script src="/WEB_HLS_CODE/Project_giua_ki/js/hoctuvung.js"></script>
+</body>
+</html>

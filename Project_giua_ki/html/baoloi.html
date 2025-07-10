@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo lỗi</title>
+    <link rel="stylesheet" href="/WEB_HLS_CODE/Project_giua_ki/css/baoloi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <a href="/WEB_HLS_CODE/Project_giua_ki/html/trangchu.html" class="back-home-btn" title="Trở về trang chủ">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="baoloi-container">
+        <h2 class="baoloi-title">Báo lỗi</h2>
+        <button class="baoloi-create-btn"><i class="fa-solid fa-bug"></i> Tạo báo cáo</button>
+        <div class="baoloi-filter-group">
+            <label for="baoloi-status">Trạng thái xử lý</label>
+            <select id="baoloi-status">
+                <option>Tất cả</option>
+            </select>
+        </div>
+        <div class="baoloi-table-wrapper">
+            <table class="baoloi-table">
+                <thead>
+                    <tr>
+                        <th>MÃ LỖI</th>
+                        <th>TIÊU ĐỀ</th>
+                        <th>LOẠI BÁO CÁO</th>
+                        <th>TRẠNG THÁI</th>
+                        <th>NGÀY TẠO</th>
+                        <th>NGÀY HOÀN THÀNH</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="baoloi-empty">Không có dữ liệu phù hợp</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="baoloi-popup" id="baoloiPopup" style="display:none;">
+        <div class="baoloi-popup-content">
+            <button class="baoloi-popup-close" id="closeBaoloiPopup">&times;</button>
+            <h2>Tạo báo cáo lỗi</h2>
+            <form id="baoloiForm">
+                <label for="maLoi">MÃ LỖI</label>
+                <input type="text" id="maLoi" name="maLoi" required>
+                <label for="tieuDe">TIÊU ĐỀ</label>
+                <input type="text" id="tieuDe" name="tieuDe" required>
+                <label for="loaiBaoCao">LOẠI BÁO CÁO</label>
+                <select id="loaiBaoCao" name="loaiBaoCao" required>
+                    <option value="">Chọn loại báo cáo</option>
+                    <option value="Giao diện">Giao diện</option>
+                    <option value="Chức năng">Chức năng</option>
+                    <option value="Dữ liệu">Dữ liệu</option>
+                    <option value="Khác">Khác</option>
+                </select>
+                <label for="trangThai">TRẠNG THÁI</label>
+                <select id="trangThai" name="trangThai" required>
+                    <option value="">Chọn trạng thái</option>
+                    <option value="Chờ xử lý">Chờ xử lý</option>
+                    <option value="Đang xử lý">Đang xử lý</option>
+                    <option value="Đã hoàn thành">Đã hoàn thành</option>
+                </select>
+                <label for="ngayTao">NGÀY TẠO</label>
+                <input type="date" id="ngayTao" name="ngayTao" required>
+                <label for="ngayHoanThanh">NGÀY HOÀN THÀNH</label>
+                <input type="date" id="ngayHoanThanh" name="ngayHoanThanh">
+                <button type="submit" class="baoloi-popup-save">Lưu</button>
+            </form>
+        </div>
+    </div>
+    <script src="/WEB_HLS_CODE/Project_giua_ki/js/baoloi.js"></script>
+</body>
+</html>
