@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo</title>
+    <link rel="stylesheet" href="/WEB_HLS_CODE/Project_giua_ki/css/thongbao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <button class="create-ticket-btn" id="openTicketPopup"><i class="fa-solid fa-plus"></i> Tạo ticket</button>
+    <div class="notification-total">Tổng: 1</div>
+    <table class="notification-table">
+        <thead>
+            <tr>
+                <th>TIÊU ĐỀ</th>
+                <th>NGƯỜI GỬI</th>
+                <th>NGƯỜI NHẬN</th>
+                <th>NGÀY TẠO</th>
+                <th>TRẠNG THÁI</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#" class="notification-title">ZIM Academy thông báo thay đổi cố vấn học tập</a></td>
+                <td>Vũ Thị Phương Thảo</td>
+                <td>Lê Đức Mạnh</td>
+                <td>19:19 02/04/2025</td>
+                <td>Waiting</td>
+                <td><button class="reply-btn">Trả lời</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Popup tạo ticket -->
+    <div class="ticket-popup" id="ticketPopup" style="display:none;">
+        <div class="ticket-popup-content">
+            <button class="ticket-popup-close" id="closeTicketPopup">&times;</button>
+            <h2>Tạo ticket mới</h2>
+            <form id="ticketForm">
+                <label for="ticketTitle">Tiêu đề</label>
+                <input type="text" id="ticketTitle" name="ticketTitle" required maxlength="30">
+                <label for="ticketSender">Người gửi</label>
+                <input type="text" id="ticketSender" name="ticketSender" required>
+                <label for="ticketReceiver">Người nhận</label>
+                <input type="text" id="ticketReceiver" name="ticketReceiver" required>
+                <label for="ticketDate">Ngày tạo</label>
+                <input type="datetime-local" id="ticketDate" name="ticketDate" required>
+                <label for="ticketStatus">Trạng thái</label>
+                <select id="ticketStatus" name="ticketStatus" required>
+                    <option value="Waiting">Waiting</option>
+                    <option value="Done">Done</option>
+                    <option value="Closed">Closed</option>
+                </select>
+                <button type="submit" class="ticket-popup-save">Lưu</button>
+            </form>
+        </div>
+    </div>
+    <script src="/WEB_HLS_CODE/Project_giua_ki/js/thongbao.js"></script>
+</body>
+</html>
