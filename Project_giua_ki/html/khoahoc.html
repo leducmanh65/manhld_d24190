@@ -21,12 +21,12 @@
                 <a href="#" class="status-item">Đã hủy <span class="count">0</span></a>
             </nav>
             <div class="filter-wrapper">
-                <select class="course-filter">
+                <select class="course-filter" id="subject-filter">
                     <option>Môn học: Tất cả</option>
-                    <option>IELTS</option>
-                    <option>TOEIC</option>
                     <option>APTIS</option>
+                    <option>TOEIC</option>
                 </select>
+                <!-- XÓA 2 DROPDOWN LỚP HỌC VÀ GIÁO VIÊN -->
             </div>
         </div>
 
@@ -271,5 +271,16 @@
             </div>
         </div>
     </div>
+    <script>
+// Chuyển trang khi chọn TOEIC
+const subjectFilter = document.getElementById('subject-filter');
+if(subjectFilter) {
+    subjectFilter.addEventListener('change', function() {
+        if(this.value === 'TOEIC') {
+            window.location.href = '/WEB_HLS_CODE/Project_giua_ki/html/toeic.html';
+        }
+    });
+}
+</script>
 </body>
 </html>

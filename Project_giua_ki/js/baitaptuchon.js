@@ -1,7 +1,7 @@
 // Script xóa bài tập động trên trang tự chọn bài tập
 
-let lastDeleted = null;
-let lastDeletedIndex = null;
+// Đa hoàn tác: dùng mảng lưu các bài tập đã xóa
+let deletedStack = [];
 let undoBtn = null;
 
 function showUndoButton() {
@@ -10,21 +10,25 @@ function showUndoButton() {
         undoBtn.innerHTML = '<i class="fa-solid fa-rotate-left"></i> Hoàn tác';
         undoBtn.className = 'undo-btn';
         undoBtn.addEventListener('click', function() {
-            if (lastDeleted && lastDeletedIndex !== null) {
+            if (deletedStack.length > 0) {
+                const { node, index } = deletedStack.pop();
                 const baitapList = document.querySelector('.baitap-list');
                 const items = baitapList.querySelectorAll('.baitap-item');
-                if (lastDeletedIndex >= items.length) {
-                    baitapList.appendChild(lastDeleted);
+                if (index >= items.length) {
+                    baitapList.appendChild(node);
                 } else {
-                    baitapList.insertBefore(lastDeleted, items[lastDeletedIndex]);
+                    baitapList.insertBefore(node, items[index]);
                 }
-                lastDeleted = null;
-                lastDeletedIndex = null;
-                undoBtn.remove();
+                if (deletedStack.length === 0) {
+                    undoBtn.remove();
+                    undoBtn = null;
+                }
             }
         });
     }
-    document.body.appendChild(undoBtn);
+    if (!document.body.contains(undoBtn)) {
+        document.body.appendChild(undoBtn);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Tìm tới .baitap-item gần nhất và xóa nó
                 const baitapItem = e.target.closest('.baitap-item');
                 if (baitapItem) {
-                    // Lưu lại node và vị trí
-                    lastDeleted = baitapItem;
+                    // Lưu lại node và vị trí vào stack
                     const items = Array.from(list.querySelectorAll('.baitap-item'));
-                    lastDeletedIndex = items.indexOf(baitapItem);
+                    const index = items.indexOf(baitapItem);
+                    deletedStack.push({ node: baitapItem, index });
                     baitapItem.remove();
                     showUndoButton();
                 }
